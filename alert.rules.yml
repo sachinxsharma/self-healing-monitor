@@ -1,0 +1,39 @@
+groups:
+  - name: server_alerts
+    rules:
+
+      - alert: HighCPUUsage
+        expr: 100 - (avg(rate(node_cpu_seconds_total{mode="idle"}[2m])) * 100) > 80
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High CPU Usage Detected"
+          description: "CPU usage is above 80% for more than 1 minute."
+
+      - alert: HighMemoryUsage
+        expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100 > 85
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High Memory Usage Detected"
+          description: "RAM usage is above 85% for more than 1 minute."
+
+      - alert: HighDiskUsage
+        expr: (1 - (node_filesystem_avail_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"})) * 100 > 90
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Disk Almost Full"
+          description: "Disk usage is above 90%."
+
+      - alert: ContainerDown
+        expr: up{job="node_exporter"} == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "Node exporter down"
+          description: "Node exporter is not reachable."
