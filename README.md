@@ -94,6 +94,7 @@ cd monitoring
 docker-compose up -d
 ```
 
+```
 🧠 Key Concepts Learned
 Infrastructure Monitoring
 Alerting Systems
@@ -101,11 +102,15 @@ Self-Healing Automation
 Docker Networking
 PromQL Queries
 DevOps Workflow
+```
+
+```
 🎯 Use Cases
 Cloud Infrastructure Monitoring
 DevOps Automation
 Production System Reliability
 Incident Detection & Recovery
+```
 
 ```
 Author
