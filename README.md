@@ -73,7 +73,7 @@ It continuously monitors system health (CPU, Memory, Disk, Containers) and:
 ## 🧪 Demo (How to Test)
 
 ### 🔥 Simulate CPU Spike
-```bash
+
 stress --cpu 4 --timeout 120
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/6802bfb4-f388-49b3-8995-b4bb2e3be47c" />
@@ -87,11 +87,12 @@ System detects failure
 Auto restarts container 🤖
 Logs updated
 
-
+```
 ⚙️ Setup Instructions
 git clone https://github.com/sachinxsharma/self-healing-monitor.git
 cd monitoring
 docker-compose up -d
+```
 
 🧠 Key Concepts Learned
 Infrastructure Monitoring
@@ -106,8 +107,10 @@ DevOps Automation
 Production System Reliability
 Incident Detection & Recovery
 
+```
 Author
 Sachin Sharma
+```
 
 ⭐ If you like this project
 - Give it a ⭐ on GitHub!
