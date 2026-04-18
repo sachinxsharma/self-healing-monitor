@@ -18,7 +18,8 @@ It continuously monitors system health (CPU, Memory, Disk, Containers) and:
 ---
 
 ## 🧠 Architecture
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/b52435e9-3dba-4f12-9d0c-e05ef25d3440" />
+<img width="1652" height="899" alt="image" src="https://github.com/user-attachments/assets/6882cb01-ac30-4387-82ad-638efac09efb" />
+
 
 
 ---
